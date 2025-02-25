@@ -43,5 +43,13 @@ int main()
         cout << r[j] << endl;
     }
 
+    // Free the memory, when you are done with it, you have to free it.
+
+    // For C++ Language, use the delete[] operator
+    delete [] r;
+
+    // For C Language, you use the free() function
+    // free(r);
+
     return 0;
 }
