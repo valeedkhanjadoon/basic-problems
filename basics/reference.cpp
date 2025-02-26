@@ -20,7 +20,7 @@ int main() {
     IMPORTANT: The reference variable is not a separate memory location.
     The reference variable is not a pointer. 
     */
-
+  
     r = 25; // Changing r will also change a because they are not different.
    
     cout << a << endl;
