@@ -7,22 +7,31 @@ struct Rectangle {
     int breath;
 };
 
-void fun(struct Rectangle r) {
-    cout << "Lenth " << r.length << endl;
-    cout << "Breath" << r.breath << endl;
+// Utilizing Heap
+struct Rectangle *funWithHeap() {
+    struct Rectangle *p;
+
+    p = new Rectangle;
+    // p = (struct Rectangle *)malloc(sizeof(struct Rectangle));
+    
+    p->length = 15;
+    p->breath = 7;
+
+    return p;
 }
 
 void funWithAddress(struct Rectangle *r) {
-    cout << "Length " << r->length << endl;
+    r->length = 20;
+    cout << "Length " << r->length << endl << "Breath " << r->breath << endl;
 }
 
 int main() {
-    struct Rectangle r = {10, 5};
-    // fun(r);
-    funWithAddress(&r);
+    // struct Rectangle r = {10, 5};
+    // funWithAddress(&r);
+    // cout << "Length " << r.length << endl << "Breath " << r.breath << endl;
 
-    cout << "Length " << r.length << endl;
-    cout << "Breath " << r.breath << endl;
+    struct Rectangle *ptr = funWithHeap();
+    cout << "Length " << ptr->length << endl << "Breath " << ptr->breath << endl;
 
     return 0;
 }
