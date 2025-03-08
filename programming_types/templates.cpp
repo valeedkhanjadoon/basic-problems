@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// Remember to add the template on the class as well as it's functions
 template<class T>
 class Arithmetic
 {
